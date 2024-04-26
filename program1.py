@@ -5,8 +5,15 @@ def smallest_missing_positive_integer(nums: List[int]) -> int:
     to find the smallest missing positive integer in the given list.
 
     """
-    pass
-
+    positive_nums = [x for x in arr if x > 0]
+    
+    # Create a set to remove duplicates
+    num_set = set(positive_nums)
+    
+    # Iterate through positive integers starting from 1
+    for i in range(1, len(positive_nums) + 2):
+        if i not in num_set:
+            return i
 
 
 
